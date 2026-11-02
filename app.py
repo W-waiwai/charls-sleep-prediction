@@ -8,9 +8,9 @@ import numpy as np
 # 1. 加载模型和配方
 # ==========================================
 try:
-    model = joblib.load('../models/model_lr.pkl')
-    scaler = joblib.load('../models/scaler_final.pkl')
-    with open('../models/selected_features.json', 'r') as f:
+   model = joblib.load('model_lr.pkl')
+   scaler = joblib.load('scaler_final.pkl')
+   with open('selected_features.json', 'r') as f:
         features = json.load(f)
 except Exception as e:
     st.error(f"⚠️ 模型加载失败，请检查文件。错误信息: {e}")
